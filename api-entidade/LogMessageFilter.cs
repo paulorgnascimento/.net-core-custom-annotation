@@ -17,10 +17,10 @@ namespace api_entidade
             var method = context.ActionDescriptor as ControllerActionDescriptor;
             if (method != null)
             {
-                var attributes = method.MethodInfo.GetCustomAttributes(typeof(LogMessageAttribute), false);
+                var attributes = method.MethodInfo.GetCustomAttributes(typeof(EventoPersonalizadoAttribute), false);
                 if (attributes.Any())
                 {
-                    var logAttribute = attributes.First() as LogMessageAttribute;
+                    var logAttribute = attributes.First() as EventoPersonalizadoAttribute;
                     _logger.LogInformation(logAttribute.Message);
                 }
             }

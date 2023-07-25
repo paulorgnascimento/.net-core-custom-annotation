@@ -1,10 +1,10 @@
 ﻿namespace api_entidade
 {
-    public class LogMessageAttribute : Attribute
+    public class EventoPersonalizadoAttribute : Attribute
     {
         public string Message { get; }
 
-        public LogMessageAttribute(string message)
+        public EventoPersonalizadoAttribute(string message)
         {
             Message = message;
         }
